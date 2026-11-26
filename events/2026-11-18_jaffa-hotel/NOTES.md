@@ -29,3 +29,6 @@ A live jazz band played (visible in the photos), so the brief suggests sophistic
 
 ## Unused but strong
 JH_066 / 068 / 086 / 089 / 090 / 126 (nave and band, but they show the client projection) · JH_048 (landscape version of JH_038) · JH_073 / 079 / 080 (delphinium variants) · JH_058 (red orchid tower) · JH_069 (stone stool) · JH_092 (night windows) · JH_062 (lounge wide) · JH_117 (lounge with guests)
+
+### v10 (42.5 s)
+Anna added her own photo (`extra/JH_portrait.jpg`, phone photo 993×1600): two women in the night arcade, placed after the blue finale JH_124 and before the logo. 4 beats, dissolve in, gentle push only (low resolution). Credit: not by Shani Zilberg, so check the photo credit before posting.
