@@ -41,9 +41,13 @@ def render_shot(im, a, b, t):
 # logo: key the near-black background to pure black
 _l = Image.open(cfg["logo"]).convert("L"); _bg = _l.getpixel((5, 5))
 LOGO = _l.point(lambda v: 0 if v <= _bg + 6 else min(255, int((v - _bg) * 255 / (255 - _bg)))).convert("RGB")
+CARD = Image.open(cfg["end_card"]["image"]).convert("RGB") if "image" in cfg["end_card"] else None
 def logo_frame(t, dur):
-    a = ease(t / 1.0); z = 0.95 + 0.05 * ease(t / dur); side = int(1080 * z)
-    fr = Image.new("RGB", (W, H)); fr.paste(LOGO.resize((side, side), Image.LANCZOS), ((W - side) // 2, (H - side) // 2))
+    a = ease(t / 1.0); z = 0.95 + 0.05 * ease(t / dur); fr = Image.new("RGB", (W, H))
+    if CARD:  # full-frame end card (e.g. co-branded split), slow 5% scale from centre
+        cw, ch = int(W * z), int(H * z); fr.paste(CARD.resize((cw, ch), Image.LANCZOS), ((W - cw) // 2, (H - ch) // 2))
+    else:
+        side = int(1080 * z); fr.paste(LOGO.resize((side, side), Image.LANCZOS), ((W - side) // 2, (H - side) // 2))
     return Image.blend(Image.new("RGB", (W, H)), fr, a)
 
 shots = cfg["shots"]

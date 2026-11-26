@@ -32,3 +32,7 @@ JH_066 / 068 / 086 / 089 / 090 / 126 (nave and band, but they show the client pr
 
 ### v10 (42.5 s)
 Anna added her own photo (`extra/JH_portrait.jpg`, phone photo 993×1600): two women in the night arcade, placed after the blue finale JH_124 and before the logo. 4 beats, dissolve in, gentle push only (low resolution). Credit: not by Shani Zilberg, so check the photo credit before posting.
+
+### v11 (43.1 s)
+End card is now co-branded and split exactly in half (1080×1920, halves of 960 px, gold hairline at the midpoint): Elki Jacobs Design on top, Shani Zilbiger Production + Design below, each centred in its half. Built with `tools/make_end_card.py` → `brand/end_card_elki_shani.png`. Held 5 beats (3.1 s) so both names can be read.
+**Check:** the Drive file names say "SHANI ZILBERG" but the logo says "ZILBIGER". Confirm the correct spelling and Shani's role (photographer, or production + design?) before writing credits.
