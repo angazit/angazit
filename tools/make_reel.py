@@ -81,8 +81,30 @@ def frame_at(tt):
         fr = Image.blend(pf, fr, ease(lt / s["xf"]))
     return fr
 
+# optional title: {"script": "...", "caps": "...", "start": s, "end": s, "y": px}
+from PIL import ImageFilter
+IVORY, GOLD = (255, 248, 240), (232, 215, 174)
+FD = cfg.get("fonts", "brand/fonts")
+def title_layer(ti, alpha):
+    lay = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(lay); a = int(255 * alpha)
+    f1 = ImageFont.truetype(f"{FD}/Pinyon.ttf", ti.get("script_size", 150))
+    f2 = ImageFont.truetype(f"{FD}/Cormorant.ttf", ti.get("caps_size", 34)); sp = 9
+    y = ti.get("y", 760)
+    d.text(((W - d.textlength(ti["script"], font=f1)) / 2, y), ti["script"], font=f1, fill=IVORY + (a,))
+    cw = sum(d.textlength(c, font=f2) for c in ti["caps"]) + sp * (len(ti["caps"]) - 1); x = (W - cw) / 2
+    for c in ti["caps"]:
+        d.text((x, y + 205), c, font=f2, fill=GOLD + (a,)); x += d.textlength(c, font=f2) + sp
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sh.putalpha(lay.split()[3].filter(ImageFilter.GaussianBlur(14)).point(lambda v: v * 0.75))
+    return Image.alpha_composite(sh, lay)
+
 for f in range(n):
-    ff.stdin.write(frame_at(f / FPS).tobytes())
+    tt = f / FPS; fr = frame_at(tt)
+    for ti in cfg.get("titles", []):
+        st, en = ti["start"], ti["end"]
+        a = min(ease((tt - st) / 0.5), 1 - ease((tt - (en - 0.4)) / 0.4)) if st <= tt < en else 0
+        if a > 0: fr = Image.alpha_composite(fr.convert("RGBA"), title_layer(ti, a)).convert("RGB")
+    ff.stdin.write(fr.tobytes())
 ff.stdin.close(); ff.wait()
 
 print(f"{OUT}: {total:.1f}s @ {cfg['bpm']} BPM ({total / BEAT:.0f} beats), {len(shots)} shots")
