@@ -3,7 +3,7 @@
 - **Photos:** Shani Zilberg, 40 selects in Drive "Jaffa Hotel - chosen photos" (renamed `JH_<frame>.jpg`; originals untouched in Drive).
 - **Concept:** golden hour to blue hour. A stone cloister and chapel that change colour as the evening goes on. Palette: ivory stone, orange/burgundy cymbidium, stained-glass blue.
 - **Client:** corporate. The client's name is projected on the chapel wall in about 9 photos. From v6, Anna asked to include it: JH_084 shows it. All other crops still keep it out; the lanyards photo (JH_053) is excluded. **Check** that the client approved before publishing.
-- **Timeline:** `edit_v8.json`, 96 BPM grid, 23 shots + logo, 41.9 s.
+- **Timeline:** `edit_v9.json`, 96 BPM grid, 22 shots + logo, 40.0 s.
 
 ## Versions
 | Version | Length | Notes |
@@ -14,7 +14,8 @@
 | v5 | 41.9 s | Anna asked for 2 ballroom ceiling shots: JH_068 (golden vault, after the overhead floor: look down, then look up) and JH_090 (warm vault + band) dissolving into JH_124, so the ceiling turns from gold to blue |
 | v6 | 42.5 s | Anna: include a photo with the projected client name, and bring back the v2 opening title. JH_090 replaced by JH_084 (same vault, tilts down past the band to 'Rodman & Renshaw' and the bar, 4 beats); title 'The Jaffa / TEL AVIV – YAFO' over the opening, 0.3–2.6 s |
 | v7 | 40.6 s | Anna: remove JH_068 (golden ceiling looking up). Annotated storyboard via tools/storyboard.py |
-| **v8** | 41.9 s | Anna: title now 'The Jaffa Hotel', on screen 0.3–4.2 s; opening shot JH_127 extended to 7 beats (4.4 s) to carry it |
+| v8 | 41.9 s | Anna: title now 'The Jaffa Hotel', on screen 0.3–4.2 s; opening shot JH_127 extended to 7 beats (4.4 s) to carry it |
+| **v9** | 40.0 s | Anna: remove JH_011 (night corridor). Night arcade JH_034 now cuts straight to JH_084 |
 
 ## Decisions
 - Opening JH_127: slow tilt from the blue vault to the band, the strongest image used as the hook.
