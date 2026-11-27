@@ -1,0 +1,361 @@
+{
+ "event": "Corporate evening, The Jaffa Hotel, Tel Aviv-Yafo, 18 Nov 2026",
+ "photos_source": "Google Drive folder 'Jaffa Hotel - chosen photos' (Shani Zilberg), files renamed JH_<frame>.jpg",
+ "concept": "Golden hour to blue hour: a stone cloister and chapel that change colour with the evening",
+ "bpm": 96,
+ "fps": 30,
+ "logo": "brand/logo_square.png",
+ "shots": [
+  {
+   "photo": "JH_127",
+   "beats": 7,
+   "from": [
+    0.5,
+    0.33,
+    1.55
+   ],
+   "to": [
+    0.5,
+    0.38,
+    1.4
+   ],
+   "note": "OPENING - blue chapel, slow tilt to the band; crop keeps the client projection out"
+  },
+  {
+   "photo": "JH_001",
+   "beats": 3,
+   "from": [
+    0.36,
+    0.56,
+    1.0
+   ],
+   "to": [
+    0.64,
+    0.56,
+    1.0
+   ],
+   "in": {
+    "dissolve": 0.5
+   },
+   "note": "INTRODUCTION - the sign reads itself (pan)"
+  },
+  {
+   "photo": "JH_017",
+   "beats": 4,
+   "from": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "to": [
+    0.5,
+    0.48,
+    1.05
+   ],
+   "in": {
+    "dissolve": 0.5
+   },
+   "note": "golden-hour arches"
+  },
+  {
+   "photo": "JH_016",
+   "beats": 3,
+   "from": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "note": "corridor from above - static, architecture holds"
+  },
+  {
+   "photo": "JH_025",
+   "beats": 2,
+   "from": [
+    0.6,
+    0.56,
+    1.0
+   ],
+   "to": [
+    0.62,
+    0.58,
+    1.08
+   ],
+   "note": "DISCOVERY - orchid on stone drum"
+  },
+  {
+   "photo": "JH_014",
+   "beats": 1,
+   "from": [
+    0.55,
+    0.42,
+    1.1
+   ],
+   "note": "rhythmic run: orange cymbidium"
+  },
+  {
+   "photo": "JH_060",
+   "beats": 1,
+   "from": [
+    0.55,
+    0.52,
+    1.1
+   ],
+   "note": "rhythmic run: red cymbidium"
+  },
+  {
+   "photo": "JH_072",
+   "beats": 1,
+   "from": [
+    0.5,
+    0.42,
+    1.05
+   ],
+   "note": "rhythmic run: hydrangea, amber glass"
+  },
+  {
+   "photo": "JH_081",
+   "beats": 1,
+   "from": [
+    0.45,
+    0.5,
+    1.05
+   ],
+   "note": "rhythmic run: urn ring + seed pods"
+  },
+  {
+   "photo": "JH_051",
+   "beats": 2,
+   "from": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "to": [
+    0.52,
+    0.46,
+    1.08
+   ],
+   "note": "shell vases"
+  },
+  {
+   "photo": "JH_061",
+   "beats": 4,
+   "from": [
+    0.26,
+    0.5,
+    1.0
+   ],
+   "to": [
+    0.74,
+    0.5,
+    1.0
+   ],
+   "note": "calla window - lateral move across three vases"
+  },
+  {
+   "photo": "JH_038",
+   "beats": 2,
+   "from": [
+    0.6,
+    0.45,
+    1.25
+   ],
+   "to": [
+    0.6,
+    0.44,
+    1.32
+   ],
+   "note": "blue glass table (crop removes floor tape)"
+  },
+  {
+   "photo": "JH_077",
+   "beats": 2,
+   "from": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "to": [
+    0.5,
+    0.48,
+    1.06
+   ],
+   "note": "delphinium urn"
+  },
+  {
+   "photo": "JH_070",
+   "beats": 2,
+   "from": [
+    0.6,
+    0.62,
+    1.0
+   ],
+   "to": [
+    0.6,
+    0.66,
+    1.1
+   ],
+   "note": "printed linen ..."
+  },
+  {
+   "photo": "JH_091",
+   "beats": 2,
+   "from": [
+    0.5,
+    0.48,
+    1.1
+   ],
+   "to": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "in": {
+    "dissolve": 0.45
+   },
+   "note": "... dissolves into the stained glass it quotes (match)"
+  },
+  {
+   "photo": "JH_063",
+   "beats": 4,
+   "from": [
+    0.5,
+    0.56,
+    1.0
+   ],
+   "note": "TRANSFORMATION - lounge under the window, static symmetry"
+  },
+  {
+   "photo": "JH_087",
+   "beats": 3,
+   "from": [
+    0.5,
+    0.55,
+    1.12
+   ],
+   "to": [
+    0.5,
+    0.55,
+    1.0
+   ],
+   "note": "overhead checkerboard - gentle pull-back reveals the plan"
+  },
+  {
+   "photo": "JH_093",
+   "beats": 2,
+   "from": [
+    0.5,
+    0.52,
+    1.06
+   ],
+   "to": [
+    0.5,
+    0.5,
+    1.0
+   ],
+   "note": "champagne"
+  },
+  {
+   "photo": "JH_115",
+   "beats": 2,
+   "from": [
+    0.3,
+    0.55,
+    1.0
+   ],
+   "to": [
+    0.28,
+    0.55,
+    1.06
+   ],
+   "note": "canapes in shadow - light falls"
+  },
+  {
+   "photo": "JH_058",
+   "beats": 3,
+   "from": [
+    0.5,
+    0.45,
+    1.05
+   ],
+   "to": [
+    0.5,
+    0.42,
+    1.12
+   ],
+   "in": {
+    "dissolve": 0.5
+   },
+   "note": "CLIMAX - Photographer original JH_058 (same as Anna's upload, full resolution) replaces JH_034: tiered red cymbidium + burgundy hydrangea tower"
+  },
+  {
+   "photo": "JH_084",
+   "beats": 4,
+   "from": [
+    0.5,
+    0.3,
+    1.3
+   ],
+   "to": [
+    0.5,
+    0.62,
+    1.3
+   ],
+   "in": "cut",
+   "note": "client approved: warm vault, tilt down past the band to the projected Rodman & Renshaw name and the bar"
+  },
+  {
+   "photo": "JH_124",
+   "beats": 5,
+   "from": [
+    0.5,
+    0.36,
+    1.45
+   ],
+   "to": [
+    0.5,
+    0.38,
+    1.6
+   ],
+   "note": "Finale - ceiling turns blue: dissolve from the warm vault, through the doorway to the band",
+   "in": {
+    "dissolve": 0.7
+   }
+  },
+  {
+   "photo": "JH_portrait",
+   "beats": 4,
+   "from": [
+    0.5,
+    0.52,
+    1.0
+   ],
+   "to": [
+    0.5,
+    0.53,
+    1.02
+   ],
+   "in": {
+    "dissolve": 0.6
+   },
+   "note": "Anna's photo: two women in the night arcade, just before the logo (phone photo, gentle push only)"
+  }
+ ],
+ "end_card": {
+  "beats": 6,
+  "dissolve": 0.6,
+  "image": "brand/end_card_jaffa.png"
+ },
+ "version": "v16",
+ "titles": [
+  {
+   "script": "A night in Jaffa",
+   "caps": "TEL AVIV \u2013 YAFO",
+   "start": 0.3,
+   "end": 4.2,
+   "y": 760
+  }
+ ],
+ "title": "A night in Jaffa",
+ "end_card_label": "End card: 3 logos"
+}

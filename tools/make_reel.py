@@ -21,10 +21,10 @@ W, H, FPS = 1080, 1920, cfg.get("fps", 30)
 BEAT = 60 / cfg["bpm"]
 ease = lambda t: 0.5 - 0.5 * math.cos(math.pi * max(0.0, min(1.0, t)))
 
+from functools import lru_cache
+@lru_cache(maxsize=3)  # full-resolution originals; only the current/previous shots stay in memory
 def load(name):
-    im = Image.open(f"{PH}/{name}.jpg").convert("RGB")
-    s = 2600 / max(im.size)
-    return im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+    return Image.open(f"{PH}/{name}.jpg").convert("RGB")
 
 def window(im, cx, cy, z):
     iw, ih = im.size
@@ -36,7 +36,7 @@ def window(im, cx, cy, z):
 
 def render_shot(im, a, b, t):
     e = ease(t)
-    return im.resize((W, H), Image.BICUBIC, box=window(im, *[a[i] + (b[i] - a[i]) * e for i in range(3)]))
+    return im.resize((W, H), Image.LANCZOS, box=window(im, *[a[i] + (b[i] - a[i]) * e for i in range(3)]), reducing_gap=3.0)
 
 # logo: key the near-black background to pure black
 _l = Image.open(cfg["logo"]).convert("L"); _bg = _l.getpixel((5, 5))
@@ -51,7 +51,9 @@ def logo_frame(t, dur):
     return Image.blend(Image.new("RGB", (W, H)), fr, a)
 
 shots = cfg["shots"]
-imgs = {s["photo"]: load(s["photo"]) for s in shots}
+class _Imgs(dict):
+    def __getitem__(self, k): return load(k)
+imgs = _Imgs()
 starts, t = [], 0.0
 for i, s in enumerate(shots):
     s["dur"] = s.get("sec", s.get("beats", 0) * BEAT)
@@ -63,7 +65,7 @@ logo_start = t; total = t + end_dur
 n = round(total * FPS)
 
 ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-    "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", str(cfg.get("crf", 18)),
+    "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "slow", "-crf", str(cfg.get("crf", 14)), "-tune", "film", "-x264-params", "aq-mode=3",
     "-pix_fmt", "yuv420p", "-movflags", "+faststart", OUT], stdin=subprocess.PIPE)
 
 def frame_at(tt):
